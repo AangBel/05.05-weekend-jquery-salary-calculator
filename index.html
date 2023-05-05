@@ -1,5 +1,16 @@
 <!DOCTYPE html>
 
+
+
+
+
+<button id="delete-btn">Delete ❎</button>
+
+
+<!------------------------------------------------------------------------------>
+
+
+
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -25,17 +36,21 @@
       <button id="submit-btn">Submit</button>
     </form>
     <!--EMPLOYEES---------------------------------------------------------------->
-    <h2>Employees</h2>
-    <form>
-      <input type="text" placeholder="First Name" id="first-name-input" />
-      <input type="text" placeholder="Last Name" id="last-name-input" />
-      <input type="text" placeholder="ID" id="id-input" />
-      <input type="text" placeholder="Title" id="title-input" />
-      <input type="text" placeholder="Annual Salary" id="salary-input" />
-
-      <button id="delete-btn">Delete ❎</button>
-    </form>
-
+    <section>
+        <h3>Employees</h3>
+        <table id="table">
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Annual Salary</th>
+              <th><!--Column for Delete--></th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+        </tbody>
     <!------------------------------------------------------------------------------>
   </body>
 </html>
