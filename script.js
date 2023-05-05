@@ -23,7 +23,7 @@ function addToTable(event) {
       <td>${inputID}</td>
       <td>${inputTitle}</td>
       <td>${inputSalary}</td>
-      <td><button id="delete-btn">❎</button></td
+      <td><button id="delete-btn">Delete</button></td>
   </tr>
   
   `);
