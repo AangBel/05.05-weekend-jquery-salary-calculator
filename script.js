@@ -35,5 +35,20 @@ function removeTable() {
 
 //---------------------------------------------------------------
 function calculateSalaryCosts(){
-    for( let i = 0; i < inputSalaryArray; i++ )
-}
+    for( let i = 0; i < inputSalary; i++ ){
+
+    }
+    //would i have to also do sum = 0 - what does this do again? 
+    //it holds a placeholder for the numbers to go in 
+};//end of calculate Salary Costs
+
+
+//const inputSalary = number => {
+    //const sum = inputOne + inputTwo + inputThree;
+    //return sum;
+
+//};//end of inputSalary //should i name it like sumSalary instead to dist.?
+
+//what i want to do is to take the input of salary to add to the other salary 
+//input salary and to get a sum and then take that sum and 
+//have it display there at the bottom of the table 
