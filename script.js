@@ -34,3 +34,6 @@ function removeTable() {
 } //end of remove table
 
 //---------------------------------------------------------------
+function calculateSalaryCosts(){
+    for( let i = 0; i < inputSalaryArray; i++ )
+}
