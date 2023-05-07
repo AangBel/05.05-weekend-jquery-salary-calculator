@@ -2,8 +2,6 @@ $(document).ready(onReady);
 
 function onReady() {
   console.log("I got this.");
-  //   $("#fire-btn").on("click", createFire);
-  //   $("#ice-btn").on("click", createIce);
   $("#tableBody").on("click", "#delete-btn", removeTable);
   $("#submit-btn").on("click", addToTable);
 } //end of onReady
@@ -14,7 +12,8 @@ function addToTable(event) {
   let inputID = $("#id-input").val();
   let inputTitle = $("#title-input").val();
   let inputSalary = $("#salary-input").val();
-  console.log(inputFirstName,inputLastName, inputID, inputTitle, inputSalary);
+  console.log(inputFirstName, inputLastName, inputID, inputTitle, inputSalary);
+  //---------------------------------------------------------------
   event.preventDefault();
   $("#tableBody").append(`      
   <tr>
@@ -27,28 +26,38 @@ function addToTable(event) {
   </tr>
   
   `);
-} //add to table end
-//---------------------------------------------------------------
+
+
+//let totalSalary = 0;
+totalSalary = 0;
+totalSalary += inputSalary;
+let monthlySalary = 0
+monthlySalary += Math.round(totalSalary/12);
+
+$("#sum").append(`
+// changed from total salary sum or whatever id named it 
+//('Employee Totals: ${monthlySalary}');
+
+$("#salary-input").text(monthlySalary);
+
+$("#salary-input").val(""); //this part is important bc its the .val = values entered
+
+
+`)
+document.getElementById("monthlySalary").innerHTML = monthlySalary
+}
+// We have to take each input and put it somewhere temporarily so as new employees
+// are entered it does not overwrite. We can use totalSalary for this.
+//Then we let totalSalary divided by 12 = monthlySalary
+//Within some logic, you can highlight the over amount in red
+
+// $("#totalSalary") 
+//(inputSalary)+= $("#totalSalary");
+//$("#totalSalary").text('Total Salary: ${totalSalary}');
+//('Employee Totals: ${totalSalary}');
+
+
 function removeTable() {
-  $(this).parent().parent().remove();
-} //end of remove table
-
-//---------------------------------------------------------------
-function calculateSalaryCosts(){
-    for( let i = 0; i < inputSalary; i++ ){
-
-    }
-    //would i have to also do sum = 0 - what does this do again? 
-    //it holds a placeholder for the numbers to go in 
-};//end of calculate Salary Costs
-
-
-//const inputSalary = number => {
-    //const sum = inputOne + inputTwo + inputThree;
-    //return sum;
-
-//};//end of inputSalary //should i name it like sumSalary instead to dist.?
-
-//what i want to do is to take the input of salary to add to the other salary 
-//input salary and to get a sum and then take that sum and 
-//have it display there at the bottom of the table 
+    $(this).parent().parent().remove();
+  } //end of remove table
+  
